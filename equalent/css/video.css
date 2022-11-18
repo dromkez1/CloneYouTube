@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+     /**
+             * Для эксплорера
+             */
+             -ms-user-select: none;
+
+             /**
+              * Для мозилы
+              */
+             -moz-user-select: none;
+ 
+             /**
+              * Для конкверора
+              */
+             -khtml-user-select: none;
+ 
+             /**
+              * Для Сафари и Хрома
+              */
+             -webkit-user-select: none;
+             font-family: 'Roboto', sans-serif;
+
+}
+.roboto-font{
+  font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    background:-webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(15deg,  rgb(104, 13, 16) 0%,rgb(9, 39, 86) 100%);
+}
+.video-cont{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.video-cont.theater,
+.video-cont.full{
+    max-width: initial;
+    width: 100%;
+    
+}
+.video-cont.theater{
+    max-height: 80vh;
+
+    margin-inline: auto;
+}
+.video-cont.full{
+    max-height: 100vh;
+}
+video{
+    width: 100%;
+}
+.video-contrl-cont{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    color: white;
+}
+.video-cont:hover .video-contrl-cont,
+.video-cont.paused .video-contrl-cont{
+    opacity: 1;
+}
+.video-contrl-cont .controls{
+    display: flex;
+    gap: .5rem;
+    padding: .25rem;
+    align-items: center;
+}
+.video-contrl-cont::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .75), transparent);
+  width: 100%;
+  aspect-ratio: 6 / 1;
+  z-index: -1;
+  pointer-events: none;
+}
+.video-contrl-cont .controls button{
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: .67;
+    transition: opacity 150ms ease-in-out;
+}
+.video-contrl-cont .controls button:hover{
+    opacity: 1;
+}
+.video-cont.paused .pause-icon{
+    display: none;
+}
+.video-cont:not(.paused) .play-icon{
+    display: none;
+}
+.video-cont.theater .tall{
+    display: none;
+}
+.video-cont:not(.theater) .wide{
+    display: none;
+}
+.video-cont.full .open{
+    display: none;
+}
+.video-cont:not(.full) .close{
+    display: none;
+}
+.volume-high-icon,
+.volume-low-icon,
+.volume-muted-icon {
+  display: none;
+}
+
+.video-cont[data-volume-level="high"] .volume-high-icon {
+  display: block;
+}
+
+.video-cont[data-volume-level="low"] .volume-low-icon {
+  display: block;
+}
+
+.video-cont[data-volume-level="muted"] .volume-muted-icon {
+  display: block;
+}
+
+.volume-container {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  color: white;
+  width: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: width 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.volume-container:hover .volume-slider {
+  width: 100px;
+  transform: scaleX(1);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.duration-container {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    flex-grow: 1;
+}
+.video-contrl-cont .controls button.wide-btn{
+    width: 222px;
+    margin-right: auto; 
+margin-left: auto;
+
+}
+.timline-cont{
+    height: 7px;
+    margin-inline: .5rem;
+    display: flex;
+    align-items: center;
+}
+.timeline{
+    height: 3px; 
+    background-color: rgba(100, 100, 100, .5);
+    width: 100%;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: calc(100% - var(--preview-position) * 100%);
+    background-color: rgb(150, 150, 150);
+    display: none;
+  }
+  
+  .timeline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: calc(100% - var(--progress-position) * 100%);
+    background-color: red;
+  }
+  .timeline .indicator {
+    --scale: 0;
+    position: absolute;
+    transform: translateX(-50%) scale(var(--scale));
+    height: 200%;
+    top: -50%;
+    left: calc(var(--progress-position ) * 100%);
+    background-color: red;
+    border-radius: 50%;
+    transition: transform 150ms ease-in-out;
+    aspect-ratio: 1 / 1;
+  }
+  .timline-cont:hover .timeline::before{
+    display: block;
+  }
+  .timline-cont:hover .indicator{
+    --scale: 1;
+  }
+  .timline-cont:hover .timeline{
+    height: 100%;
+}
+.limited{
+  max-height: 78px;
+  overflow: hidden;
+  position: relative;
+}
+.limited .bottom{
+  position: absolute;
+  bottom: 0;
+  width: 48%;
+  height: 20px;
+  opacity: 1;
+}
+.read-more-checker{
+  opacity: 0;
+  position: absolute;
+}
+.read-more-botton{
+  cursor: pointer;
+}
+.read-more-checker ~ .read-more-botton:after{
+  content: 'Развернуть описание';
+}
+.read-more-checker:checked ~ .read-more-botton:after{
+  content: 'Свернуть описание';
+}
+.read-more-checker:checked ~ .limited{
+  max-height: none;
+}
+.read-more-checker:checked ~ .limited .bottom{
+  background: none;
+}

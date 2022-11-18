@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Видео</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/video.css">
+</head>
+<body class=" text-white">
+    <header class="mx-auto flex items-center justify-between px-36 pt-5">
+        <a href="../index.html"><div class="logo text-4xl font-bold text-white">equivalent</div></a>
+    </header>
+    <div class="w-[90%] grid gap-2 mt-5 grid-cols-2" style="grid-template-columns: 75% 1fr ;"> 
+        <div class="ml-24">
+          <div class="video-cont paused container mx-auto" data-volume-level="high">
+            <div class="video-contrl-cont">
+                <div class="timline-cont">
+                  <div class="timeline">
+                    <div class="indicator"></div>
+                  </div>
+                </div>
+                <div class="controls">
+                  
+                    <button class="play-pause-btn">
+                        <svg class="play-icon" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                          </svg>
+                          <svg class="pause-icon" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+                          </svg>
+                    </button>
+                    <button>
+                      <svg class="replay5" viewBox="0 0 24 24" width="30px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8zm-1.31 8.9l.25-2.17h2.39v.71h-1.7l-.11.92c.03-.02.07-.03.11-.05s.09-.04.15-.05.12-.03.18-.04.13-.02.2-.02c.21 0 .39.03.55.1s.3.16.41.28.2.27.25.45.09.38.09.6c0 .19-.03.37-.09.54s-.15.32-.27.45-.27.24-.45.31-.39.12-.64.12c-.18 0-.36-.03-.53-.08s-.32-.14-.46-.24-.24-.24-.32-.39-.13-.33-.13-.53h.84c.02.18.08.32.19.41s.25.15.42.15c.11 0 .2-.02.27-.06s.14-.1.18-.17.08-.15.11-.25.03-.2.03-.31-.01-.21-.04-.31-.07-.17-.13-.24-.13-.12-.21-.15-.19-.05-.3-.05c-.08 0-.15.01-.2.02s-.11.03-.15.05-.08.05-.12.07-.07.06-.1.09l-.67-.16z"/></svg>
+                    </button>
+                    <button>
+                      <svg class="forward5" viewBox="0 0 24 24" width="30px" fill="#FFFFFF"><path d="M17.95 13c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6v4l5-5-5-5v4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8h-2zm-5.52 2.15c-.05.07-.11.13-.18.17s-.17.06-.27.06c-.17 0-.31-.05-.42-.15s-.17-.24-.19-.41h-.84c.01.2.05.37.13.53s.19.28.32.39.29.19.46.24.35.08.53.08c.24 0 .46-.04.64-.12s.33-.18.45-.31.21-.28.27-.45.09-.35.09-.54c0-.22-.03-.43-.09-.6s-.14-.33-.25-.45-.25-.22-.41-.28-.34-.1-.55-.1c-.07 0-.14.01-.2.02s-.13.02-.18.04-.1.03-.15.05-.08.04-.11.05l.11-.92h1.7v-.71H10.9l-.25 2.17.67.17c.03-.03.06-.06.1-.09s.07-.05.12-.07.1-.04.15-.05.13-.02.2-.02c.12 0 .22.02.3.05s.16.09.21.15.1.14.13.24.04.19.04.31-.01.22-.03.31-.06.17-.11.24z"/></svg>
+                    </button>
+                    <div class="volume-container">
+                      <button class="mute-btn">
+                        <svg class="volume-high-icon" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+                        </svg>
+                        <svg class="volume-low-icon" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M5,9V15H9L14,20V4L9,9M18.5,12C18.5,10.23 17.5,8.71 16,7.97V16C17.5,15.29 18.5,13.76 18.5,12Z" />
+                        </svg>
+                        <svg class="volume-muted-icon" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.5,12.43 16.5,12.21 16.5,12Z" />
+                        </svg>
+                      </button>
+                      <input class="volume-slider" type="range" min="0" max="1" step="any" value="1">
+                    </div>
+                    <div class="duration-container">
+                      <div class="current-time">0:00</div>
+                      /
+                      <div class="total-time"></div>
+                    </div>
+                    <div class="speed-btn wide-btn">
+                      1x
+                    </div>
+                    <button class="mini-player-btn">
+                        <svg viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zm-10-7h9v6h-9z"/>
+                        </svg>
+                      </button>
+                      <button class="theater-btn">
+                        <svg class="tall" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M19 6H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H5V8h14v8z"/>
+                        </svg>
+                        <svg class="wide" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M19 7H5c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 8H5V9h14v6z"/>
+                        </svg>
+                      </button>
+                      <button class="full-screen-btn">
+                        <svg class="open" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                        <svg class="close" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/>
+                        </svg>
+                      </button>
+                </div>
+            </div>
+            <video src="../src/90mh - Trefuego (sped up).mp4"></video>
+        </div>
+        </div>
+        <div class="row-span-2 ml-14 w-full" style=""> 
+            <a href="../html/video.html">
+              <div class="flex mb-5 hover:scale-90 hover:bg-sky-600	 transition duration-150 ease-in-out">
+                 <div class="w-full">
+                   <img src="../src/dripcheck.jpg" alt="">
+                 </div>
+                 <div class="ml-1  w-full">
+                     <div class="text-base font-medium ">
+                         <span>Trefuego - 90mh</span>
+                     </div>
+                     <div class="text-sm font-light opacity-80 mt-2">
+                     <span>90mh</span> <br>
+                     <span>2 дня назад</span>
+                   </div>
+                 </div>
+               </div>
+             </a>
+             <a href="../html/video.html">
+              <div class="flex mb-5 hover:scale-90 hover:bg-sky-600	 transition duration-150 ease-in-out">
+                 <div class="w-full">
+                   <img src="../src/dripcheck.jpg" alt="">
+                 </div>
+                 <div class="ml-1  w-full">
+                     <div class="text-base font-medium ">
+                         <span>Trefuego - 90mh</span>
+                     </div>
+                     <div class="text-sm font-light opacity-80 mt-2">
+                     <span>90mh</span> <br>
+                     <span>2 дня назад</span>
+                   </div>
+                 </div>
+               </div>
+             </a>
+             <a href="../html/video.html">
+              <div class="flex mb-5 hover:scale-90 hover:bg-sky-600	 transition duration-150 ease-in-out">
+                 <div class="w-full">
+                   <img src="../src/dripcheck.jpg" alt="">
+                 </div>
+                 <div class="ml-1  w-full">
+                     <div class="text-base font-medium ">
+                         <span>Trefuego - 90mh</span>
+                     </div>
+                     <div class="text-sm font-light opacity-80 mt-2">
+                     <span>90mh</span> <br>
+                     <span>2 дня назад</span>
+                   </div>
+                 </div>
+               </div>
+             </a>
+             <a href="../html/video.html">
+              <div class="flex mb-5 hover:scale-90 hover:bg-sky-600	 transition duration-150 ease-in-out">
+                 <div class="w-full">
+                   <img src="../src/dripcheck.jpg" alt="">
+                 </div>
+                 <div class="ml-1  w-full">
+                     <div class="text-base font-medium ">
+                         <span>Trefuego - 90mh</span>
+                     </div>
+                     <div class="text-sm font-light opacity-80 mt-2">
+                     <span>90mh</span> <br>
+                     <span>2 дня назад</span>
+                   </div>
+                 </div>
+               </div>
+             </a>
+             <a href="../html/video.html">
+              <div class="flex mb-5 hover:scale-90 hover:bg-sky-600	 transition duration-150 ease-in-out">
+                 <div class="w-full">
+                   <img src="../src/dripcheck.jpg" alt="">
+                 </div>
+                 <div class="ml-1  w-full">
+                     <div class="text-base font-medium ">
+                         <span>Trefuego - 90mh</span>
+                     </div>
+                     <div class="text-sm font-light opacity-80 mt-2">
+                     <span>90mh</span> <br>
+                     <span>2 дня назад</span>
+                   </div>
+                 </div>
+               </div>
+             </a>
+             <a href="../html/video.html">
+              <div class="flex mb-5 hover:scale-90 hover:bg-sky-600	 transition duration-150 ease-in-out">
+                 <div class="w-full">
+                   <img src="../src/dripcheck.jpg" alt="">
+                 </div>
+                 <div class="ml-1  w-full">
+                     <div class="text-base font-medium ">
+                         <span>Trefuego - 90mh</span>
+                     </div>
+                     <div class="text-sm font-light opacity-80 mt-2">
+                     <span>90mh</span> <br>
+                     <span>2 дня назад</span>
+                   </div>
+                 </div>
+               </div>
+             </a>
+             <a href="../html/video.html">
+              <div class="flex mb-5 hover:scale-90 hover:bg-sky-600	 transition duration-150 ease-in-out">
+                 <div class="w-full">
+                   <img src="../src/dripcheck.jpg" alt="">
+                 </div>
+                 <div class="ml-1  w-full">
+                     <div class="text-base font-medium ">
+                         <span>Trefuego - 90mh</span>
+                     </div>
+                     <div class="text-sm font-light opacity-80 mt-2">
+                     <span>90mh</span> <br>
+                     <span>2 дня назад</span>
+                   </div>
+                 </div>
+               </div>
+             </a>
+                   
+        </div>
+        <div class="ml-24 w-[90%] mb-5">
+          <span class="text-2xl font-normal leading-10">Trefuego - 90mh</span>
+          <div class="flex">
+            <img class="w-[60px] h-[60px] rounded-full" src="../src/ava.jpg"  alt="">
+            <div class="self-center ml-2 opacity-80">
+              <span>90mh</span> <br>
+              <span class="text-xs">2 дня назад</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-lg mt-5" style="background: rgba(0, 0, 0, 0.3);">
+  Описание:
+            <input type="checkbox" class="read-more-checker" id="read-more-checker">
+  <div class="container mx-auto mt-2 text-sm limited">
+    <pre>Текст песни:
+      [Intro]
+      (Hi, Kevin)
+      Ayy, yuh, ayy
+      Top, ayy
+      Top, Fuego
+      Ayy (Fuego, Fuego)
+      
+      [Chorus]
+      You don't really want smoke, you ain't 'bout that shit
+      I been cruisin' down the block (Gang) with a bad-ass bitch (Gang, gang)
+      With my mind on the chips and this .9 on my hip (Grra)
+      Fuck, then I dip (Bow), say I'm finna take a trip (Bow, bow-bow)
+      You don't really want smoke, you ain't 'bout that shit (Tsaha)
+      I been cruisin' down the block (Ayy) with a bad-ass bitch (Gang, gang)
+      With my mind on the chips and this .9 on my hip (Ayy, Fuego)
+      Fuck, then I dip, say I'm finna take a trip (Ayy, yuh)
+      [Verse 1]
+      Nigga too icy, I pull up in layers (Ayy)
+      Don't need a blade, I'm still gonna slay her
+      Mind on the bread but I'm not a baker (Wow)
+      Need to teach school with the way that I get paper
+      I don't fuck with 12, don't fuck with no rules (Gang)
+      I do fuck with guns, so hand me that Ruger (Grra, bow, bow)
+      Pass me the gas, I'm finna get higher (Sky)
+      Don't need a test, I know she a liar (Ahh)
+      Niggas dumb as hell, they don't got no bread, but won't bail
+      They don't fuck with nobody, but won't mail (Stupid)
+      Don't send me your tape, it won't sell (Dumb-ass nigga)
+      Yo, I'm sorry, ho (Tsaha), that I couldn't be your Romeo (Gang, gang)
+      'Cause you was too focused on Julio
+      And now I'm too focused on getting dough, bitch
+      
+      [Chorus]
+      You don't really want smoke, you ain't 'bout that shit
+      I been cruisin' down the block with a bad-ass bitch (Skrrt)
+      With my mind on the chips and this .9 on my hip (Ayy)
+      Fuck, then I dip (Grra), say I'm finna take a trip (Bow, bow-bow)
+      You don't really want smoke, you ain't 'bout that shit (Nah)
+      I been cruisin' down the block with a bad-ass bitch (Gang, gang, skrrt)
+      With my mind on the chips and this .9 on my hip (Skrrt)
+      Fuck, then I dip (Ayy), say I'm finna take a trip (Ayy)
+      You might also like
+      Miss Me
+      TREFUEGO
+      ОЙДА (OIDA)
+      Oxxxymiron
+      [Verse 2]
+      Water my diamonds, my body parts shinin' (Shine, shine, shine)
+      She follow like Simon, get hit like a Lion
+      Call up the plug 'cause I'm rollin' a bud (Skrrt, skrrt, skrrt, yuh)
+      You're not from the hood, get that understand
+      I tote the MAC, get hit in the back (Swag, swag, swag, yeah)
+      'Cause we carry tacks and all of this shit rack
+      I'm in the booth and I'm smokin' on cookie (Swag, skrrt)
+      I know that I'm fresh but I'm still not a rookie (Fuego), bitch
+      
+      [Outro]
+      Ayy, dang
+      This ho heat, on my mama, nigga
+      On my mama, nigga
+      On my mama, this ho heat, ha
+      For real, nigga
+      Ayy, a-na-na, tuh-ruh
+      Fuego, duh-ruh, tuh-ruh, tuh-ruh
+      Ayy, ayy, tsaha
+      Ayy, ayy, ayy (Gang), ayy
+      It's gang, it's gang, it's gang, bitch (Gang)
+      Yuh, Fuego (Skrrt), ayy, yuh
+      Skrrt, ayy</pre>
+      <div class="bottom"></div>
+  </div>
+  <label for="read-more-checker"  class="read-more-botton mt-1 font-extralight text-xl hover:opacity-50 transition duration-150 ease-in-out" style="margin-left: 21%;"></label>
+          </div>
+        </div>
+    </div>
+    <script src="../js/video.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Создание видео</title>
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/createVideo.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen select-none">
+  <header class="mx-auto flex items-center justify-between px-36 pt-5">
+    <a href="../index.html"><div class="logo text-4xl font-bold text-white">equivalent</div></a>
+  </header>
+  <div class="w-8/12 bg-white mx-auto relative mt-5 shadow-2xl rounded-lg px-4 pb-6 " style="background: linear-gradient(180deg, rgba(38,66,104,1) 0%, rgba(70,46,61,1) 100%);">
+    <div class="text-2xl font-medium text-white ml-5 py-3">Загрузка видео</div>
+    <hr class="py-3">
+    <div class="flex">
+        <div class="w-[55%] h-[400px] overflow-y-scroll ml-6">
+            <span class="text-2xl font-semibold text-white ">Информация</span> <br><br>
+            <div class="text-field_floating ">
+                <input class="text-field__input" type="text" maxlength="50" id="nazv" placeholder=" ">
+                <label class="text-field__label" for="nazv">Название (обязательное поле)</label>
+            </div>
+            <div class="text-field_floating mt-5">
+              <textarea class="moka w-[90%] text-field__input" name="opis" placeholder=" " maxlength="2000"></textarea>
+                <label for="opis" class="text-field__label">Описание</label>
+            </div>
+            <div class="ml-3">
+              <h4 class="text-lg font-normal text-white">Превью</h4>
+              <p class="text-sm text-white opacity-60">Загрузите свою фотографию, она будет использоваться в качестве превью</p>
+            </div>
+            <div>
+              <label for="Priwew" class="border-2 w-[25%] grid mt-2 ml-3 opacity-50 hover:opacity-100 transition duration-150 ease-in-out cursor-pointer">
+                <img class="w-[20px] mx-auto py-2" src="../src/add_photo.svg" alt="">
+                <h2  class="text-white mx-auto text-xs pb-2">Загрузить превью</h2>
+              </label>
+              <input type="file" id="Priwew" class="hidden">
+            </div>
+            
+        </div>
+        <div class="flex-1 h-[400px] p-1" style="background: rgba(0, 0, 0, 0.2);">
+          <div class="border-2 h-[200px] w-[400px] mx-auto opacity-40 hover:opacity-100 transition duration-150 ease-in-out flex flex-col cursor-pointer">
+            <img src="../src/add.svg" alt="" class="w-36 mx-auto ">
+            <h3 class="text-white mx-auto">Добавить видео</h3>
+          </div>
+          <div class="text-white ml-10 mt-6 text-lg opacity-50">
+            Название Файла:
+          </div>
+          <div class="text-white ml-10 mt-2 text-lg opacity-50">
+            Время:
+          </div>
+          <span class="float-right rounded-sm cursor-pointer mt-6 mr-10 bg-blue-500 py-2 px-4 shadow-lg transition duration-150 ease-in-out hover:bg-blue-900 hover:shadow-2xl text-white">Загрузить</span>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        //!------------------------------------------------------: LEVEL I :--------------
+
+(function () {
+  //!------------------: START
+  
+const elemAll = document.querySelectorAll('.moka');
+
+[...elemAll].forEach(elem => {
+	elem.style.height = `${elem.style.scrollHeight}px`;
+	elem.addEventListener("input", OnInput, false);
+});
+
+function OnInput() {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+}
+
+  //!------------------: STOP
+})();
+
+  //!------------------------------------------------------: LEVEL II :--------------
+
+(function () {
+  //!------------------: START
+  
+  //const elemClassName = "moka";
+  const elemClassName = "x";
+
+  function elemTarget(e) {
+    e = e || window.event;
+    e.preventDefault();
+    return e.target;
+  }
+
+  document.addEventListener("input", (e) => {
+    let elem = elemTarget(e);
+    //!--- Если
+    if (elem.classList.contains(elemClassName)) {
+      OnInput(elem);
+    }
+  });
+
+  function OnInput(elem) {
+    elem.style.height = "auto";
+    elem.style.height = elem.scrollHeight + "px";
+  }
+
+  //!------------------: STOP
+})();
+    </script>
+</body>
+</html>

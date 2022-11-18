@@ -1,0 +1,66 @@
+body{
+    
+}
+.text-field_floating {
+    position: relative;
+  }
+  .text-field_floating .text-field__input {
+    background: rgba(1, 1, 1, 0.1);
+    height: 3.5;
+    width: 90%;
+    line-height: 1.25;
+    padding: 1rem 0.75rem;
+    outline: none;
+    color: white;
+    align-items: top;
+  }
+  .text-field_floating .text-field__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    height: 100%;
+    padding: 1rem .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+  }
+  /* .text-field_floating .text-field__input::-moz-placeholder {
+    color: transparent;
+  }
+  .text-field_floating .text-field__input::placeholder {
+    color: transparent;
+  } */
+  .text-field_floating .text-field__input:focus,
+  .text-field_floating .text-field__input:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: .625rem;
+  }
+  .text-field_floating .text-field__input:focus~.text-field__label,
+  .text-field_floating .text-field__input:not(:placeholder-shown)~.text-field__label {
+    opacity: .65;
+    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+  }
+  .moka {
+    background: rgba(1, 1, 1, 0.1);
+    color: white;
+    border: none;
+    outline: none;
+    resize: none;
+}
+div::-webkit-scrollbar {
+    
+    width: 10px;
+    background-color: none;
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(87, 101, 122);
+  }
+  
+  div::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: none;
+  }

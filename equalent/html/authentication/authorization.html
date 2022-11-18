@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Авторизация</title>
+  </head>
+  <body>
+    <header>
+      <a style="text-decoration: none;" href="../../index.html" >
+        <div class="logo">equivalent</div>
+      </a>
+    </header>
+    <div class="back-image">
+      <img src="../../src/bk.png" alt="">
+    </div>
+
+    <section class="left">
+      
+      <section class="side login">
+        <p class="title">Нет аккаунта?</p>
+        <button>Зарегистрироваться</button>
+        <img src="../../src/reg_back.svg" alt="">
+      </section>
+
+      <section class="main register">
+        <div class="container">
+          <p class="title">Зарегистрироваться</p>
+          <form action="#">
+            <div class="form-control">
+              <input type="text" name="" placeholder="Username" id="">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="form-control">
+              <input type="email" name="" placeholder="Email" id="">
+              <i class="fas fa-voicemail"></i>
+            </div>
+            <div class="form-control">
+              <input type="password" name="" placeholder="Password" id="">
+              <i class="fas fa-lock"></i>
+            </div>
+            <button class="submit">Регистрация</button>
+          </form>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="right">
+
+      <section class="side register">
+        <p class="title">Есть аккаунт?</p>
+        <button>Авторизация</button>
+        <img src="../../src/log_back.svg" alt="">
+      </section>
+
+      <section class="main login">
+        <div class="container">
+          <p class="title">Авторизация</p>
+          <form action="#">
+            <div class="form-control">
+              <input type="text" name="" placeholder="Username" id="">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="form-control">
+              <input type="password" name="" placeholder="Password" id="">
+              <i class="fas fa-lock"></i>
+            </div>
+            <button class="submit">Вход</button>
+          </form>
+        </div>
+      </section>
+
+    </section>
+
+    <script>
+      var sideButtons = document.querySelectorAll('.side button');
+      sideButtons.forEach(btn => btn.addEventListener('click', () => {
+          document.body.classList.toggle('signup');
+      }))
+  </script>
+  </body>
+</html>

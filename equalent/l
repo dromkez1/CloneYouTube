@@ -1,0 +1,88 @@
+
+    <div class="container mx-auto mt-5 text-2xl w-[60%] "  style="margin-left: 21%;">
+        <span class="text-2xl">Trefuego - 90mh </span>
+        <div class="text-sm" style="color: rgb(207, 207, 207);">
+          2 дня назад
+        </div>
+      </div>
+      <div class="container mx-auto flex items-start mt-2 w-[60%]" style="margin-left: 21%;">
+        <img src="../src/ava.jpg" alt="" class="mr-3 rounded-full w-12 h-12">
+        <div class="mt-1">
+          <span style="color: rgb(207, 207, 207);">Trefuego</span>
+        </div>
+    </div>
+    <input type="checkbox" class="read-more-checker" id="read-more-checker">
+    <div class="container mx-auto mt-2 text-sm limited w-[60%] px-10" style="background: rgba(0, 0, 0, 0.2);margin-left: 21%; ">
+      Текст песни:
+      <pre>[Intro]
+        (Hi, Kevin)
+        Ayy, yuh, ayy
+        Top, ayy
+        Top, Fuego
+        Ayy (Fuego, Fuego)
+        
+        [Chorus]
+        You don't really want smoke, you ain't 'bout that shit
+        I been cruisin' down the block (Gang) with a bad-ass bitch (Gang, gang)
+        With my mind on the chips and this .9 on my hip (Grra)
+        Fuck, then I dip (Bow), say I'm finna take a trip (Bow, bow-bow)
+        You don't really want smoke, you ain't 'bout that shit (Tsaha)
+        I been cruisin' down the block (Ayy) with a bad-ass bitch (Gang, gang)
+        With my mind on the chips and this .9 on my hip (Ayy, Fuego)
+        Fuck, then I dip, say I'm finna take a trip (Ayy, yuh)
+        [Verse 1]
+        Nigga too icy, I pull up in layers (Ayy)
+        Don't need a blade, I'm still gonna slay her
+        Mind on the bread but I'm not a baker (Wow)
+        Need to teach school with the way that I get paper
+        I don't fuck with 12, don't fuck with no rules (Gang)
+        I do fuck with guns, so hand me that Ruger (Grra, bow, bow)
+        Pass me the gas, I'm finna get higher (Sky)
+        Don't need a test, I know she a liar (Ahh)
+        Niggas dumb as hell, they don't got no bread, but won't bail
+        They don't fuck with nobody, but won't mail (Stupid)
+        Don't send me your tape, it won't sell (Dumb-ass nigga)
+        Yo, I'm sorry, ho (Tsaha), that I couldn't be your Romeo (Gang, gang)
+        'Cause you was too focused on Julio
+        And now I'm too focused on getting dough, bitch
+        
+        [Chorus]
+        You don't really want smoke, you ain't 'bout that shit
+        I been cruisin' down the block with a bad-ass bitch (Skrrt)
+        With my mind on the chips and this .9 on my hip (Ayy)
+        Fuck, then I dip (Grra), say I'm finna take a trip (Bow, bow-bow)
+        You don't really want smoke, you ain't 'bout that shit (Nah)
+        I been cruisin' down the block with a bad-ass bitch (Gang, gang, skrrt)
+        With my mind on the chips and this .9 on my hip (Skrrt)
+        Fuck, then I dip (Ayy), say I'm finna take a trip (Ayy)
+        You might also like
+        Miss Me
+        TREFUEGO
+        ОЙДА (OIDA)
+        Oxxxymiron
+        [Verse 2]
+        Water my diamonds, my body parts shinin' (Shine, shine, shine)
+        She follow like Simon, get hit like a Lion
+        Call up the plug 'cause I'm rollin' a bud (Skrrt, skrrt, skrrt, yuh)
+        You're not from the hood, get that understand
+        I tote the MAC, get hit in the back (Swag, swag, swag, yeah)
+        'Cause we carry tacks and all of this shit rack
+        I'm in the booth and I'm smokin' on cookie (Swag, skrrt)
+        I know that I'm fresh but I'm still not a rookie (Fuego), bitch
+        
+        [Outro]
+        Ayy, dang
+        This ho heat, on my mama, nigga
+        On my mama, nigga
+        On my mama, this ho heat, ha
+        For real, nigga
+        Ayy, a-na-na, tuh-ruh
+        Fuego, duh-ruh, tuh-ruh, tuh-ruh
+        Ayy, ayy, tsaha
+        Ayy, ayy, ayy (Gang), ayy
+        It's gang, it's gang, it's gang, bitch (Gang)
+        Yuh, Fuego (Skrrt), ayy, yuh
+        Skrrt, ayy</pre>
+        <div class="bottom"></div>
+    </div>
+    <label for="read-more-checker"  class="read-more-botton mt-1 font-extralight text-sm" style="margin-left: 21%;"></label>

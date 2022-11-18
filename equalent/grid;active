@@ -1,0 +1,12 @@
+<div class="grid border-2 w-full h-[500px] p-2 gap-4 grid-cols-2">
+      <div class="w-full h-[100px] border-2 " style="grid-column: span 2 / span 2;">1 </div>
+      <div class="w-full  h-[100px] border-2 " style="grid-column: 2 / 2; grid-row: 2 / 2;">2 </div>
+      <div class="w-full h-[100px] border-2" style="">3</div>
+</div>
+
+
+<div class="grid border-2 w-full h-[500px] p-2 gap-4 grid-cols-2">
+    <div class="w-full h-[100px] border-2" style="">1 </div>
+    <div class="w-full  h-[100px] border-2 " style="">2 </div>
+    <div class="w-full h-[100px] border-2" style="">3</div>
+  </div>
